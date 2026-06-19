@@ -1,17 +1,17 @@
-package linkedlist;
+package linkedlist_composite;
 
-public class Node
+public class Node extends ListElement
 {
-    private Node nextElement;
+    private ListElement nextElement;
     private DataElement data;
 
     public Node(DataElement data)
     {
         this.data = data;
-        nextElement = null;
+        nextElement = new Sentinal();
     }
 
-    public Node(DataElement data, Node nextElement)
+    public Node(DataElement data, ListElement nextElement)
     {
         this.data = data;
         this.nextElement = nextElement;
@@ -27,7 +27,7 @@ public class Node
         return data;
     }
 
-    public Node getNextElement()
+    public ListElement getNextElement()
     {
         return nextElement;
     }
